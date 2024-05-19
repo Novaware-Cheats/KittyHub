@@ -1,0 +1,49 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kitty Hub", "Sentinel")
+
+-- Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewToggle("Auto Farm", "Auto Farms For You", function(state)
+		if state then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2207, 128, -374)
+		plr = game:GetService('Players').LocalPlayer
+		torso = plr.Character.UpperTorso
+		hum = plr.Character.Humanoid
+		mouse = plr:GetMouse()
+		local bp = Instance.new('BodyPosition')
+		bp.MaxForce = Vector3.new(999999,999999,999999)
+		bp.Position = torso.Position
+		bp.Parent = torso
+		local bav = Instance.new('BodyAngularVelocity')
+		bav.MaxTorque = Vector3.new(992229,999999,999999)
+		bav.AngularVelocity = Vector3.new(200,200,200)
+		bav.Parent = torso
+		wait()
+    else
+		local player = game.Players.LocalPlayer.Name
+
+        game.workspace[player]:BreakJoints()
+    end
+end)
+
+-- Player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+ 
+PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+ 
+PlayerSection:NewSlider("Jumppower", "Changes the jumppower", 250, 50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+end)
+
+-- Keybinds
+local Keybinds = Window:NewTab("Keybinds")
+local KeybindsSection = Keybinds:NewSection("Keybinds")
+
+KeybindsSection:NewKeybind("Toggle UI KeyBind", "Allows You To Change Keybind That Toggles UI", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
