@@ -74,7 +74,7 @@ if game.PlaceId == 1962086868 or game.PlaceId == 3582763398 then
 		local script = Instance.new('LocalScript', Load)
  
 		script.Parent.MouseButton1Click:Connect(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/KittenPixel-cell/Kitty-Hub/main/Tower%20Of%20Hell"), true)()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaware-Cheats/KittyHub/main/Tower%20Of%20Hell"), true)()
 			KittyHubLoader:Destroy()
 		end)
 	end
@@ -156,7 +156,7 @@ if game.PlaceId == 2551991523 then
 		local script = Instance.new('LocalScript', Load)
  
 		script.Parent.MouseButton1Click:Connect(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/KittenPixel-cell/Kitty-Hub/main/Broken%20Bones%20IV"), true)()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Novaware-Cheats/KittyHub/main/Broken%20Bones%20IV", true))()
 			KittyHubLoader:Destroy()
 		end)
 	end
